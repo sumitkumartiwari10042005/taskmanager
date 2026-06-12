@@ -150,5 +150,14 @@ const logoutUser=async(req,res)=>{
 };
 
 
+const getme =async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+    res.status(200).json(  new ApiResponse(true, user ));
+  } catch (err) {
+    res.status(500).json(new ApiError( 500,err.message ));
+  }
+};
 
-export {registerUser,loginUser,logoutUser};
+
+export {registerUser,loginUser,logoutUser,getme};
