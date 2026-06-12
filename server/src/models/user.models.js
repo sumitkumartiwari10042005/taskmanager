@@ -32,10 +32,9 @@ const userSchema=new Schema({
         enum:['user','admin'],
         default:'user'
     },
-    isEmailVerified:{
-        type:Boolean,
-        default:false,
-    },
+    refreshToken:{
+        type:String,
+    }
 } , {timestamps:true });
 
 
