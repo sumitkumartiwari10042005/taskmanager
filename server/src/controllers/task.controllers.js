@@ -117,4 +117,4 @@ const deleteTask=async (req,res)=>{
 
 };
 
-export {createTask,getAllTasks,getTaskById,deleteTask};
+export {createTask,getAllTasks,getTaskById,deleteTask,updateTask};

@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors' 
 
 import authRoutes from './routes/auth.routes.js';
+import projectRoutes from './routes/project.routes.js';
+import tasksRoutes from './routes/task.routes.js';
 import { errorHandler } from './middleware/error.handler.js';
 
 
@@ -19,6 +21,8 @@ app.use(cors({
 
 
 app.use('/api/v1/auth/user',authRoutes);
+app.use('/api/v1/projects',projectRoutes);
+app.use('/api/v1/tasks',tasksRoutes)
 
 
 
